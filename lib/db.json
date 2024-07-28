@@ -1,1 +1,130 @@
-{"wallets":[{"account":1,"name":"Groceries","amount":100.0,"transactions":[{"transaction_id":1,"description":"Walmart","amount":50.0,"date":"2024-07-01"},{"transaction_id":2,"description":"Target","amount":30.0,"date":"2024-07-15"},{"transaction_id":3,"description":"Costco","amount":20.0,"date":"2024-07-20"}]},{"account":2,"name":"Bills","amount":200.0,"transactions":[{"transaction_id":1,"description":"Electricity Bill","amount":100.0,"date":"2024-07-05"},{"transaction_id":2,"description":"Water Bill","amount":50.0,"date":"2024-07-10"},{"transaction_id":3,"description":"Internet Bill","amount":50.0,"date":"2024-07-25"}]},{"account":3,"name":"Trips","amount":300.0,"transactions":[{"transaction_id":1,"description":"Gas","amount":60.0,"date":"2024-07-02"},{"transaction_id":2,"description":"Hotel","amount":150.0,"date":"2024-07-18"},{"transaction_id":3,"description":"Food","amount":90.0,"date":"2024-07-20"}]},{"account":4,"name":"School","amount":400.0,"transactions":[{"transaction_id":1,"description":"Books","amount":100.0,"date":"2024-07-03"},{"transaction_id":2,"description":"Tuition","amount":250.0,"date":"2024-07-14"},{"transaction_id":3,"description":"Supplies","amount":50.0,"date":"2024-07-21"}]},{"account":5,"name":"Entertainment","amount":150.0,"transactions":[{"transaction_id":1,"description":"Movie Tickets","amount":40.0,"date":"2024-07-08"},{"transaction_id":2,"description":"Concert","amount":60.0,"date":"2024-07-15"},{"transaction_id":3,"description":"Streaming Service","amount":50.0,"date":"2024-07-22"}]},{"account":6,"name":"Fitness","amount":80.0,"transactions":[{"transaction_id":1,"description":"Gym Membership","amount":60.0,"date":"2024-07-01"},{"transaction_id":2,"description":"Yoga Class","amount":20.0,"date":"2024-07-10"}]},{"account":7,"name":"Gifts","amount":250.0,"transactions":[{"transaction_id":1,"description":"Birthday Gift","amount":100.0,"date":"2024-07-05"},{"transaction_id":2,"description":"Anniversary Gift","amount":80.0,"date":"2024-07-14"},{"transaction_id":3,"description":"Holiday Gift","amount":70.0,"date":"2024-07-20"}]},{"account":8,"name":"Savings","amount":500.0,"transactions":[{"transaction_id":1,"description":"Deposit","amount":200.0,"date":"2024-07-02"},{"transaction_id":2,"description":"Deposit","amount":150.0,"date":"2024-07-15"},{"transaction_id":3,"description":"Deposit","amount":150.0,"date":"2024-07-25"}]},{"account":9,"name":"Healthcare","amount":120.0,"transactions":[{"transaction_id":1,"description":"Doctor Visit","amount":80.0,"date":"2024-07-07"},{"transaction_id":2,"description":"Medication","amount":40.0,"date":"2024-07-18"}]},{"account":10,"name":"Transportation","amount":90.0,"transactions":[{"transaction_id":1,"description":"Bus Fare","amount":20.0,"date":"2024-07-01"},{"transaction_id":2,"description":"Uber Ride","amount":30.0,"date":"2024-07-12"},{"transaction_id":3,"description":"Parking","amount":40.0,"date":"2024-07-20"}]}]}
+{
+  "wallets": [
+    {
+      "account": 1,
+      "name": "Groceries",
+      "amount": 100.0,
+      "transactions": [
+        {
+          "transaction_id": 1,
+          "description": "Walmart",
+          "amount": 50.0,
+          "date": "2024-07-01"
+        },
+        {
+          "transaction_id": 2,
+          "description": "Target",
+          "amount": 30.0,
+          "date": "2024-07-15"
+        },
+        {
+          "transaction_id": 3,
+          "description": "Costco",
+          "amount": 20.0,
+          "date": "2024-07-20"
+        }
+      ]
+    },
+    {
+      "account": 2,
+      "name": "Bills",
+      "amount": 200.0,
+      "transactions": [
+        {
+          "transaction_id": 1,
+          "description": "Electricity Bill",
+          "amount": 100.0,
+          "date": "2024-07-05"
+        },
+        {
+          "transaction_id": 2,
+          "description": "Water Bill",
+          "amount": 50.0,
+          "date": "2024-07-10"
+        },
+        {
+          "transaction_id": 3,
+          "description": "Internet Bill",
+          "amount": 50.0,
+          "date": "2024-07-25"
+        }
+      ]
+    },
+    {
+      "account": 3,
+      "name": "Trips",
+      "amount": 300.0,
+      "transactions": [
+        {
+          "transaction_id": 1,
+          "description": "Gas",
+          "amount": 60.0,
+          "date": "2024-07-02"
+        },
+        {
+          "transaction_id": 2,
+          "description": "Hotel",
+          "amount": 150.0,
+          "date": "2024-07-18"
+        },
+        {
+          "transaction_id": 3,
+          "description": "Food",
+          "amount": 90.0,
+          "date": "2024-07-20"
+        }
+      ]
+    },
+    {
+      "account": 4,
+      "name": "School",
+      "amount": 400.0,
+      "transactions": [
+        {
+          "transaction_id": 1,
+          "description": "Books",
+          "amount": 100.0,
+          "date": "2024-07-03"
+        },
+        {
+          "transaction_id": 2,
+          "description": "Tuition",
+          "amount": 250.0,
+          "date": "2024-07-14"
+        },
+        {
+          "transaction_id": 3,
+          "description": "Supplies",
+          "amount": 50.0,
+          "date": "2024-07-21"
+        }
+      ]
+    }
+  ],
+  "banks": [
+    {
+      "bank_id": 1,
+      "name": "Bank of America",
+      "account_number": "1234567890",
+      "balance": 5000.0
+    },
+    {
+      "bank_id": 2,
+      "name": "Chase Bank",
+      "account_number": "0987654321",
+      "balance": 3000.0
+    },
+    {
+      "bank_id": 3,
+      "name": "Wells Fargo",
+      "account_number": "1122334455",
+      "balance": 4000.0
+    },
+    {
+      "bank_id": 4,
+      "name": "Citi Bank",
+      "account_number": "5566778899",
+      "balance": 2000.0
+    }
+  ]
+}

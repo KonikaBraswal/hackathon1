@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'models.dart';
+import 'package:flutter/services.dart';
 
 // Define a static path for the JSON file
 const String staticFilePath = 'lib/db.json'; // Update this to the appropriate path
@@ -29,7 +30,7 @@ Future<void> saveWallet(Wallet wallet) async {
     // Check if the file exists
     if (!await file.exists()) {
       // If the file does not exist, create it with an empty wallets list
-      await file.writeAsString(jsonEncode({'wallets': []}));
+      await file.writeAsString(jsonEncode({'wallets': [], 'banks': []}));
     }
 
     // Load existing wallets
@@ -41,7 +42,7 @@ Future<void> saveWallet(Wallet wallet) async {
     walletsJson.add(wallet.toJson());
 
     // Write updated wallets list back to the file
-    await file.writeAsString(jsonEncode({'wallets': walletsJson}));
+    await file.writeAsString(jsonEncode({'wallets': walletsJson, 'banks': data['banks']}));
   } catch (e) {
     print('Error saving wallet: $e');
   }
@@ -62,11 +63,27 @@ Future<void> deleteWallet(Wallet wallet) async {
       walletsJson.removeWhere((w) => Wallet.fromJson(w).account == wallet.account);
 
       // Write updated wallets list back to the file
-      await file.writeAsString(jsonEncode({'wallets': walletsJson}));
+      await file.writeAsString(jsonEncode({'wallets': walletsJson, 'banks': data['banks']}));
     } else {
       print('Cannot delete wallet: Amount is not zero.');
     }
   } catch (e) {
     print('Error deleting wallet: $e');
+  }
+}
+
+// Function to load bank accounts from the static JSON file
+Future<List<BankAccount>> loadBankAccounts() async {
+  try {
+    // Load the JSON file from the static path
+    final String contents = await File(staticFilePath).readAsString();
+    final data = json.decode(contents);
+
+    // Extract bank accounts list from the JSON data
+    List<dynamic> banksJson = data['banks'];
+    return banksJson.map((json) => BankAccount.fromJson(json)).toList();
+  } catch (e) {
+    print('Error loading bank accounts: $e');
+    return [];
   }
 }
